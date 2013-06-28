@@ -1,0 +1,15 @@
+[{"Amount":10,"CategoryID":"entertainment","CategoryName":"Entertainment","Description":"Cash","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":100,"CategoryID":"entertainment","CategoryName":"Entertainment","Description":"Online Banking transfer from CHK 0002 Confirmation# 90213213213","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":100,"CategoryID":"entertainment","CategoryName":"Entertainment","Description":"Online from CHK 0002 Confirmation# 90213213213","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":200,"CategoryID":"family","CategoryName":"Family","Description":"Oxford University Fee","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":301,"CategoryID":"family","CategoryName":"Family","Description":"Paras","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":1,"CategoryID":"other","CategoryName":"Other","Description":"Paras Hospital","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":10,"CategoryID":"other","CategoryName":"Other","Description":"Salary","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":-100,"CategoryID":"other","CategoryName":"Other","Description":"Online Banking transfer from CHK 0002 Confirmation# 90213213213","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":100,"CategoryID":"other","CategoryName":"Other","Description":"Online from CHK 0002 Confirmation# 90213213213","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":200,"CategoryID":"other","CategoryName":"Other","Description":"Oxford University Fee","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+
+
+
+{"Amount":200,"CategoryID":"groceries","CategoryName":"Groceries","Description":"Oxford University Fee","TransactionDate":null,"TransactionID":null,"TransactionType":null},
+{"Amount":1,"CategoryID":"groceries","CategoryName":"Groceries","Description":"Suraj Automative","TransactionDate":null,"TransactionID":null,"TransactionType":null}]

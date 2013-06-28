@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+		<meta charset="UTF-8" />
+
+		<title>Backbone</title>
+
+	</head>
+
+	<body>
+		<h1>Backbone test</h1>
+		<div id="container">
+		</div>
+
+
+		<script type="text/template" id="pfm-template">
+			<thead>
+				<th scope="col">Description</th>
+				<th scope="col">Amount</th>
+			</thead>
+			<tbody></tbody>
+		</script>
+		<script type="text/template" id="pfm-item-template">
+			 	<td><%= Description %></td>
+			 	<td>&pound;<%= Amount %></td>
+		</script>
+
+
+		<script src="assets/js/libs/jquery-2.0.2.min.js"></script>
+		<script src="assets/js/libs/underscore-min.js"></script>
+		<script src="assets/js/libs/backbone-min.js"></script>
+
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
