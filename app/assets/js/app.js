@@ -3,21 +3,18 @@
  * Primary file for site scripting
  * Author: Ryan Mitchell (2013) (http://www.looseideas.co.uk)
  * Date : 
- * @version 0.0.1
+ * @version 0.0.2
 **/
-(function (window, $, Backbone, undefined) {
+define('app', ['jquery', 'libs/underscore-min', 'libs/backbone-min'], function ($, _, Backbone) {
 	"use strict"; // http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/
 
-	//Main/Root object
-	var _bbEx = window.bbEx || {};
-
-	_bbEx = (function (_bbEx) {
+	return function () {
 		//private variables
 		var $window = $(window),
 			dataUrl = 'data/transactions.json';
 
 		//public variables
-		_bbEx.ltIE9 = false;
+		this.ltIE9 = false;
 
 		var FinancialTransaction = Backbone.Model.extend({
 			defaults: {
@@ -89,7 +86,7 @@
 		* Init call for Main JS
 		* Called on document ready
 		*/
-		_bbEx.init = function () {
+		this.init = function () {
 			var ftd = new FinancialTransactions(),
 				view;
 
@@ -106,15 +103,8 @@
 		};
 
 		//return out new object
-		return _bbEx;
+		return this;
 
-	}(_bbEx));
-
-	//expose the root object to global scope.
-	window.bbEx = _bbEx;
-
-	$(document).ready(_bbEx.init);
-
-	
-}(window, jQuery, Backbone));
+	};
+});
 
