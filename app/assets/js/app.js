@@ -29,7 +29,7 @@ define('app', ['jquery', 'libs/underscore-min', 'libs/backbone-min'], function (
 			url: dataUrl
 		});
 
-		window.ListItemView = Backbone.View.extend({
+		var ListItemView = Backbone.View.extend({
 			template: "#pfm-item-template",
 			tagName: 'tr',
 			className: 'ftd-item',
