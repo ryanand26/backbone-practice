@@ -20,26 +20,28 @@ function readFile(filePath) {
 function start() {
 	var app = express();
 
-	app
-		.use('/_js/lib/', express.static(__dirname + '/node_modules/requirejs/'))
-		.use(express.static(__dirname + '/app'));
+	//serve lib files that are supported in node
+	app.use('/_js/lib/', express.static(__dirname + '/node_modules/requirejs/'));
 
+	//serve static files | http://expressjs.com/api.html#app.use
+	app.use(express.static(__dirname + '/app'));
+
+	//handle root
 	app.get('/', function(req, res){
-		//res.send('Hello Worldy');
 		res.sendfile('app/index.html');
 	});
 
-	app.get('/data/transactions.json', function(req, res){
-		/*readFile('data/transactions.json').then(function (value4) {
-			// Do something with value4
-				console.log('file success', text);
+	//handle data calls
+	app.use('/data/transactions.json', function(req, res){
+		readFile('data/transactions.json').then(
+			function (value) {
+				res.send(value);
 			},
 			function (error) {
-				// Handle any error from step1 through step4
-				console.log('file fail', text);
+				res.send(500, { error : 'Error: ' + error });
 			}
-		);*/
-		res.sendfile('data/transactions.json');
+		);
+		//res.sendfile('data/transactions.json');
 	});
 
 	app.listen(8080);
