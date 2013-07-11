@@ -4,7 +4,8 @@
 , "private": true
 , "dependencies": {
     "requirejs": "latest"
-  , "connect": "2.7.0"
+  , "express": "3.x"
+  , "q": "latest"
   }
 , "devDependencies": {
     "mocha": "latest"
