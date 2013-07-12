@@ -1,3 +1,4 @@
-var server = require("./server");
+var server = require("./server"),
+	data = require("./data");
 
-server.start();
+server.start(data);

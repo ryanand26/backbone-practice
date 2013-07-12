@@ -3,21 +3,10 @@ var express = require('express'),
 	fs = require('fs');
 
 
-function readFile(filePath) {
-	//'data/transactions.json'
-	var deferred = Q.defer();
-	fs.readFile(filePath, 'utf8', function (error, text) {
-		if (error) {
-			deferred.reject(new Error(error));
-		}
-		else {
-			deferred.resolve(text);
-		}
-	});
-	return deferred.promise;
-}
-
-function start() {
+/**
+* Server start
+*/
+function start(data) {
 	var app = express();
 
 	//serve lib files that are supported in node
@@ -32,19 +21,10 @@ function start() {
 	});
 
 	//handle data calls
-	app.use('/data/transactions.json', function(req, res){
-		readFile('data/transactions.json').then(
-			function (value) {
-				res.send(value);
-			},
-			function (error) {
-				res.send(500, { error : 'Error: ' + error });
-			}
-		);
-		//res.sendfile('data/transactions.json');
-	});
+	app.use('/data/', data.getData);
 
 	app.listen(8080);
+
 	console.log("Server has started.");
 }
 
