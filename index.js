@@ -1,3 +1,4 @@
+/* node:true */
 var server = require("./server"),
 	data = require("./data");
 

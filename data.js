@@ -1,3 +1,4 @@
+/* node:true */
 var events = require('events'),
 	Q = require("Q"),
 	fs = require('fs'),
@@ -53,4 +54,14 @@ exports.getData = function (req, res) {
 			}
 		);
 	}
+};
+
+exports.tempPost = function (req, res) {
+	console.log('tempPost');
+};
+exports.tempPut = function (req, res) {
+	console.log('tempPut');
+};
+exports.tempDel = function (req, res) {
+	console.log('tempDel');
 };
