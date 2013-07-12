@@ -12,6 +12,9 @@ function start(data) {
 	//serve lib files that are supported in node
 	app.use('/_js/lib/', express.static(__dirname + '/node_modules/requirejs/'));
 
+	//set session cookie | http://expressjs.com/api.html#cookieSession
+	//app.use(express.cookieSession());
+
 	//serve static files | http://expressjs.com/api.html#app.use
 	app.use(express.static(__dirname + '/app'));
 

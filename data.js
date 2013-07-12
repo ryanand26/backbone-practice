@@ -8,8 +8,10 @@ var events = require('events'),
 
 /**
 * Read a file from the system. Returns a deferred.
+* Stores the response in a variable
+* This is not suitable for multiple users, this was supposed to be a backbone test anyway...
 */
-var readFile = function (filePath) {
+var readDataFromFs = function (filePath) {
 	var deferred = Q.defer();
 
 	dataStore = null;
@@ -42,7 +44,7 @@ exports.getData = function (req, res) {
 		return true;
 	}
 	else {
-		return readFile(dataLocation).then(
+		return readDataFromFs(dataLocation).then(
 			function (value) {
 				res.send(value);
 			},
