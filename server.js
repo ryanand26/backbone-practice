@@ -10,7 +10,7 @@ function start(data) {
 	var app = express();
 
 	//serve lib files that are supported in node
-	app.use('/_js/lib/', express.static(__dirname + '/node_modules/requirejs/'));
+	app.use('/_js/lib/', express.static(__dirname + '/node_modules/'));
 
 	//set session cookie | http://expressjs.com/api.html#cookieSession
 	//app.use(express.cookieSession());

@@ -5,7 +5,7 @@
  * Date : 
  * @version 0.0.2
 **/
-define('app', ['jquery', 'libs/underscore-min', 'libs/backbone-min'], function ($, _, Backbone) {
+define('app', ['jquery', '/_js/lib/underscore/underscore.js', '/_js/lib/backbone/backbone-min.js'], function ($, _, Backbone) {
 	"use strict"; // http://dmitrysoshnikov.com/ecmascript/es5-chapter-2-strict-mode/
 
 	return function () {

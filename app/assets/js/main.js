@@ -6,11 +6,17 @@ requirejs.config({
 	},
 
 	shim: {
-		'libs/underscore-min': {
+		'/_js/lib/underscore/underscore.js': {
+			//These script dependencies should be loaded before loading
+            //deps: [],
+            //Once loaded, use the global 'Backbone' as the module value.
 			exports: '_'
 		},
-		'libs/backbone-min': {
-			deps: ['libs/underscore-min'] , exports: 'Backbone'
+		'/_js/lib/backbone/backbone-min.js': {
+			//These script dependencies should be loaded before loading
+			deps: ['/_js/lib/underscore/underscore.js'],
+			//Once loaded, use the global 'Backbone' as the module value.
+			exports: 'Backbone'
 		}
 	}
 });

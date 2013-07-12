@@ -1,19 +1,21 @@
 {
-  "name": "backbone-test"
-, "version": "0.0.1"
-, "private": true
-, "dependencies": {
-    "requirejs": "latest"
-  , "express": "3.x"
-  , "q": "latest"
-  }
-, "devDependencies": {
-    "mocha": "latest"
-  , "chai": "latest"
-  , "grunt": "latest"
-  , "grunt-exec": "latest"
-  }
-, "scripts": {
+  "name": "backbone-test",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "requirejs": "latest",
+    "express": "3.x",
+    "q": "latest",
+    "underscore" : "latest",
+    "backbone" : "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "chai": "latest",
+    "grunt": "latest",
+    "grunt-exec": "latest"
+  },
+  "scripts": {
     "grunt": "node_modules/.bin/grunt"
   }
 }
